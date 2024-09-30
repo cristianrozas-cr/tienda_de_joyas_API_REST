@@ -11,6 +11,10 @@ const PORT = 3000;
 const app = express();
 app.listen(PORT, console.log("Puerto encendido"));
 
+//Middleware
+app.use(express.json());
+app.use(cors());
+
 
 //Rutas
 app.get("/joyas", async (req, res) => {
